@@ -1,0 +1,10 @@
+<a class="card-link btn btn-primary mb-4 mt-2" (click)="open(addModal)"><strong>+ </strong>{{ 'home.newCourse' | translate }}</a>
+<ngb-carousel  *ngIf="courses">
+    <ng-template *ngFor="let course of courses" ngbSlide>
+        <app-course-card (edit)="editCourse($event)"  (delete)="deleteCourse($event)" [course]="course"> </app-course-card>
+    </ng-template>
+</ngb-carousel>
+
+<ng-template #addModal let-modal>
+    <app-course-modal  [edit]="false" (save)="createCourse($event)"  (close)="modal.close('cross clikced')"> </app-course-modal>
+</ng-template>

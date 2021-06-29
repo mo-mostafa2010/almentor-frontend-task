@@ -1,0 +1,23 @@
+{
+  "home": {
+    "by": "بواسطة",
+    "edit": "تعديل",
+    "delete": "مسح",
+    "newCourse": "كورس جديد",
+    "editCourse": "تعديل كورس",
+    "course": "كورس",
+    "save": "حفظ",
+    "egp": "ج.م",
+    "close":  "غلق"
+  },
+  "course": {
+    "title": "العنوان",
+    "price": "السعر",
+    "teacher": "المدرس",
+    "imageURL":  "رابط الصورة"
+  },
+  "delete": {
+    "confirmDelete": "تأكيد الحذف",
+    "areYouSure": "هل انت متأكد انك تريد الحذف ؟"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "home": {
+    "by": "by",
+    "edit": "edit",
+    "delete": "delete",
+    "newCourse": "New Course",
+    "editCourse": "Edit Course",
+    "course": "Course",
+    "save": "save",
+    "egp": "EGP",
+    "close": "close"
+  },
+  "course": {
+    "title": "title",
+    "price": "price",
+    "teacher": "teacher",
+    "imageURL":  "image URL"
+  },
+  "delete": {
+    "confirmDelete": "Confirm Delete",
+    "areYouSure": "Are you sure you want to delete ?"
+  }
+}

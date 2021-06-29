@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{edit? ('home.editCourse' | translate): ('home.newCourse' | translate)}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="emitClose()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <form [formGroup]='form'>
+        <div class="row">
+          <div class="col-md-6 col-sm-12 mt-2">
+            <label for="title">{{'course.title' | translate}}</label>
+            <input type="text" name="title" formControlName="title" class="form-control"  [placeholder]="'course.title' | translate" required>
+          </div>
+          <div class="col-md-6 col-sm-12 mt-2">
+            <label for="title">{{'course.price' | translate}}</label>
+            <input type="number" name="price" formControlName="price" class="form-control"  [placeholder]="'course.price' | translate" required>
+          </div>
+          <div class="col-md-6 col-sm-12 mt-2">
+            <label for="title">{{'course.teacher' | translate}}</label>
+            <input type="text" name="teacher" formControlName="teacher" class="form-control"  [placeholder]="'course.teacher' | translate" required>
+          </div>
+          <div class="col-md-6 col-sm-12 mt-2">
+            <label for="title">{{'course.imageURL' | translate}}</label>
+            <input type="text" name="img" formControlName="img" class="form-control"  [placeholder]="'course.imageURL' | translate" required>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="emitSave()" >{{'home.save' | translate}}</button>
+  </div>

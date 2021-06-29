@@ -1,0 +1,21 @@
+<img [src]="course.img" class="d-block w-100" alt="title">
+<div class="carousel-caption text-dark">
+  <div class="card m-auto w-75">
+    <div class="card-body" style="text-align: start;">
+      <h5 class="card-title">{{course.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{course.price}} {{ 'home.egp' | translate }}</h6>
+      <p class="mt-4">{{ 'home.by' | translate }}: <strong>
+        {{course.teacher}}
+      </strong> </p>
+      <a class="btn btn-primary mr-1 ml-1" (click)="open(editModal)">{{ 'home.edit' | translate }}</a>
+      <a class="btn btn-danger mr-1 ml-1" (click)="open(deleteModal)">{{ 'home.delete' | translate }}</a>
+    </div>
+  </div>
+</div>
+
+<ng-template #editModal let-modal>
+  <app-course-modal [course]="course" [edit]="true" (save)="emitEdit($event)" (close)="modal.close('cross clikced')"> </app-course-modal>
+</ng-template>
+<ng-template #deleteModal let-modal>
+  <app-confirm-delete-modal (delete)="emmitDelete()" (close)="modal.close('cross clikced')"> </app-confirm-delete-modal>
+</ng-template>
